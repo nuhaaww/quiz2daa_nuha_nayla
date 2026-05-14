@@ -12,19 +12,19 @@
 | 2 | 5025241014 | Almira Nayla Felisitha |
 
 ## Overview
-This is a command-line number guessing game built as part of Quiz 2 for EF234405 Design & Analysis of Algorithms. The core mechanic of the game is powered by the **Binary Search** algorithm — one of the most fundamental search algorithms in computer science.
+This is a command line number guessing game built. The core mechanic of the game is powered by the **Binary Search** algorithm, one of the most fundamental search algorithms in computer science.
 
-The game has three modes: you can guess the computer's number manually, let the computer guess your number using binary search, or watch a live step-by-step demo of the algorithm working on a random target. The goal is to make binary search tangible and interactive rather than just a concept on paper.
+The game has three modes: you can guess the computer's number manually, let the computer guess your number using binary search, or watch a live step by step demo of the algorithm working on a random target. The goal is to make binary search tangible and interactive rather than just a concept on paper.
 
 ---
 
 ## Why Binary Search?
 
-Binary Search is a classic divide-and-conquer algorithm that is perfectly suited for guessing games. In a regular (linear) guessing game, you might just guess 1, 2, 3, 4... in the worst case, that's 100 guesses for a range of 1–100. Binary Search cuts that down dramatically by always guessing the **midpoint** of the remaining range.
+Binary Search is a classic divide and conquer algorithm that is perfectly suited for guessing games. In a regular (linear) guessing game, you might just guess 1, 2, 3, 4... in the worst case, that's 100 guesses for a range of 1–100. Binary Search cuts that down by always guessing the **midpoint** of the remaining range.
 
-Each guess eliminates **half** of all remaining possibilities. This is what gives binary search its O(log n) time complexity — and why the computer can always find any number between 1 and 100 in **at most 7 guesses**, no matter what the number is.
+Each guess eliminates **half** of all remaining possibilities. This is why the computer can always find any number between 1 and 100 in **at most 7 guesses**, no matter what the number is.
 
-It's worth noting that binary search only works on a sorted (ordered) search space. In this game, the search space is the integer range [1, 100], which is naturally sorted — so binary search applies perfectly.
+It's worth noting that binary search only works on a sorted (ordered) search space. In this game, the search space is the integer range [1, 100], which is naturally sorted, so binary search applies perfectly.
 
 ---
 
@@ -45,11 +45,11 @@ It's worth noting that binary search only works on a sorted (ordered) search spa
 |--------|-------|
 | Time Complexity | O(log n) |
 | Space Complexity | O(1) |
-| Best Case | O(1) — target is exactly the midpoint on the first guess |
-| Worst Case | O(log n) — target is at the edge of the range |
+| Best Case | O(1) ; target is exactly the midpoint on the first guess |
+| Worst Case | O(log n) ; target is at the edge of the range |
 | Worst case for n=100 | ⌈log₂(100)⌉ = **7 guesses** |
 
-For comparison, a naive linear search would take up to **100 guesses** in the worst case. Binary search reduces this to just 7 — that's over 14x more efficient for this range.
+For comparison, a naive linear search would take up to **100 guesses** in the worst case. Binary search reduces this to just 7, that's over 14x more efficient for this range.
 
 ### Pseudocode
 ```
@@ -98,7 +98,7 @@ You think of a number between 1 and 100. The computer uses binary search to find
 The computer will always find your number in at most 7 guesses. You can try to beat it by memorizing its pattern, but it's mathematically guaranteed to find the number in logarithmic time regardless.
 
 ### Mode 3 — Binary Search Demo
-The computer picks a random number and immediately runs binary search on it, printing every single step: the current range, the midpoint guess, and whether it went left or right. This is the most educational mode — you can see exactly how the algorithm narrows down the range with each step.
+The computer picks a random number and immediately runs binary search on it, printing every single step: the current range, the midpoint guess, and whether it went left or right. This is the most educational mode, you can see exactly how the algorithm narrows down the range with each step.
 
 ---
 
@@ -159,7 +159,3 @@ Algorithm: O(log n) time, O(1) space.
 - Mode 2 relies on honest input from the player. A cheat-detection system could flag inconsistent answers (e.g. if the player's responses are logically contradictory).
 
 ---
-
-## References
-- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). *Introduction to Algorithms* (3rd ed.). MIT Press.
-- Goodrich, M. T., Tamassia, R., & Goldwasser, M. H. (2014). *Data Structures and Algorithms in Python*. Wiley.
